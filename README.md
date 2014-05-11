@@ -20,7 +20,7 @@ transport_form.lines << TFCheckbox.new(name: "")
 transport_form.save
 ```
 
-#### Transport (ship form to another system for answering)
+#### Transport the form (ship form to another system for answering)
 
 ```ruby
 transport_form.serialize
@@ -28,7 +28,7 @@ transport_form.serialize
 
 (ship it off to another place.  perhaps via rest-api)
 
-#### Answer
+#### Get an Answer
 ``` ruby
 @tf = TransportForm.deserialize
 @tf.save
@@ -45,8 +45,11 @@ tfa = TransportFormAnswer.new params[:form]
 tfa.save # validation also happens, re-render on failures
 ```
 
-#### Transport (ship back answer to originating system)
+#### Return Transport (ship back answer to originating system)
 
 ```ruby
 tfa.serialize
 ```
+
+And the answer(s) are associated with the original form.
+
