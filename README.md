@@ -1,3 +1,5 @@
+(note this is just an outline in readme form.  there is no code yet)
+
 # FormTransporter
 
 Create a form, including sections and validations, and transport it to another app/database.
