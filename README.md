@@ -34,12 +34,12 @@ transport_form.serialize
 @tf.save
 ```
 
-__ in a view __
+__in a view__
 ```ruby
 @tf.render
 ```
 
-__ then in the transported form controller __
+__then in the transported form controller__
 ```ruby
 tfa = TransportFormAnswer.new params[:form]
 tfa.save # validation also happens, re-render on failures
